@@ -383,6 +383,9 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;g
 .rep-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;margin-top:48px}
 .feat{position:relative;min-height:540px;border-radius:12px;overflow:hidden;background:#2A241C;color:#F5F1EA;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;padding:34px}
 .feat .ph-slot{position:absolute;inset:14px;border:1px dashed rgba(245,241,234,.3);border-radius:8px;display:grid;place-items:center;color:rgba(245,241,234,.55);font-size:14px;text-align:center;padding:16px}
+.feat .ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,12,.82),rgba(20,16,12,.15) 65%)}
+.tier-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;display:block}
 .feat-tx{position:relative;display:flex;flex-direction:column;gap:10px}
 .feat-tx .ep{font-family:var(--f-mono);font-size:14px;color:#E2C9A4}
 .feat-tx b{font-family:var(--f-display);font-size:clamp(30px,3.4vw,42px);line-height:1.3}
@@ -748,7 +751,7 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
         <div class="tier main rv"><span class="sub-label" style="color:var(--stamp)">창립 멤버 · 모집 준비 중</span><div class="price">시즌 박스 <small>연 2회</small></div>
           <ul><li>시즌마다 바꿀 물건 하나 (시즌 1은 Trunk 01 두 장)</li><li>성분 카드와 사용 가이드</li><li>다음 물건을 정하는 투표권</li><li>만드는 과정의 개발 일지</li></ul>
           <p class="note">가격과 결제 방식은 대기 신청자 의견을 듣고 정합니다.</p></div>
-        <div class="tier rv"><span class="sub-label">Kit 01 · 준비 중</span><div class="price">스타트 키트</div>
+        <div class="tier rv"><img class="tier-img" src="img/kit01-flatlay.jpg" alt="크라프트지 위의 치실, 대나무 칫솔, 수세미, 소창 행주, 성분 카드" loading="lazy"><span class="sub-label">Kit 01 · 준비 중</span><div class="price">스타트 키트</div>
           <ul><li>대나무 치실 · 대나무 칫솔 · 수세미 · 소창 행주</li><li>품목별 성분 카드, 못 뺀 것까지</li><li>만든 곳과 확인한 범위 공개</li><li>EP.03~06에서 하나씩 소개</li></ul>
           <p class="note">매일 쓰는 넷, 오늘부터 하나씩. 가격은 대기 신청자 의견을 듣고 정합니다.</p></div>
       </div>
@@ -763,13 +766,13 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
       </div>
       <div class="rep-grid">
         <a class="feat rv" href="#join">
-          <div class="ph-slot">[사진: 손에 든 감열지 영수증 클로즈업]</div>
+          <img class="ph-img" src="img/ep01-receipt.jpg" alt="손에 든 구겨진 감열지 영수증" loading="lazy"><div class="shade"></div>
           <div class="feat-tx"><span class="ep">EP.01 · 영수증 · 11월</span><b>우리의 영수증,<br>아직 안전할까요?</b><span>'BPA Free' 영수증 뒷면에 무엇이 있는지.</span></div>
         </a>
         <ol class="rep-list">
           <li class="rv"><div class="th"><img src="img/concept-woven-flat.jpg" alt="면 트렁크" loading="lazy"></div><div><span class="ep">EP.02 · 속옷 · 11월</span><h4>당신의 팬티 성분은 무엇인가요?</h4><p>라벨 한 줄로는 알 수 없는 것들.</p></div></li>
-          <li class="rv"><div class="th slot">[사진:<br>치실]</div><div><span class="ep">EP.03 · 치실 · 12월</span><h4>'대나무 치실'의 대나무는 어디에 있을까요?</h4><p>실, 코팅, 용기를 하나씩 열어 봅니다.</p></div></li>
-          <li class="rv"><div class="th slot">[사진:<br>칫솔]</div><div><span class="ep">EP.04 · 칫솔 · 12월</span><h4>칫솔모는 왜 아직 못 뺐을까요?</h4><p>대나무 손잡이에 나일론 모, 돼지털을 고르지 않은 이유. EP.05 수세미 · EP.06 행주로 이어집니다.</p></div></li>
+          <li class="rv"><div class="th"><img src="img/ep03-floss.jpg" alt="대나무 뚜껑 유리병에 담긴 치실" loading="lazy"></div><div><span class="ep">EP.03 · 치실 · 12월</span><h4>'대나무 치실'의 대나무는 어디에 있을까요?</h4><p>실, 코팅, 용기를 하나씩 열어 봅니다.</p></div></li>
+          <li class="rv"><div class="th"><img src="img/ep04-toothbrush.jpg" alt="도자기 컵 위에 놓인 대나무 칫솔" loading="lazy"></div><div><span class="ep">EP.04 · 칫솔 · 12월</span><h4>칫솔모는 왜 아직 못 뺐을까요?</h4><p>대나무 손잡이에 나일론 모, 돼지털을 고르지 않은 이유. EP.05 수세미 · EP.06 행주로 이어집니다.</p></div></li>
           <li class="rv"><div class="th slot">교집합</div><div><span class="ep">매달 한 번 · 전문가 대담</span><h4>두 전문가의 교집합에서 물건 하나</h4><p>난임 전문의 × 섬유 시험 전문가처럼, 분야가 다른 두 사람이 함께 찾는 다음 물건.</p></div></li>
         </ol>
       </div>
