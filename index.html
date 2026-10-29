@@ -410,7 +410,7 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;g
 @media (max-width:820px){.cb{grid-template-columns:1fr}}
 
 /* ===== together ===== */
-.tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:40px}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
 .tier{border-radius:22px;padding:30px 28px 32px;display:flex;flex-direction:column;gap:14px;min-width:0;background:var(--paper)}
 .tier.main{box-shadow:inset 0 0 0 2px var(--stamp)}
 .tier .price{font-family:var(--f-display);font-size:clamp(30px,3.6vw,40px);font-weight:700;letter-spacing:-.03em}
@@ -419,6 +419,7 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;g
 .tier li{display:flex;gap:10px;font-size:15.5px}
 .tier li::before{content:"";flex:none;width:14px;height:8px;border-left:2px solid var(--stamp);border-bottom:2px solid var(--stamp);transform:rotate(-45deg) translateY(4px)}
 .tier .note{margin-top:auto}
+@media (max-width:1100px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:820px){.tiers{grid-template-columns:1fr}}
 .series{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .series li{border-top:2px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
@@ -606,7 +607,7 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
       <div class="subhead rv"><span class="sub-label">물건을 고르고 만드는 기준</span><h3>들어간 것은 전부 적고,<br>적을 수 없는 것은 넣지 않습니다.</h3></div>
       <div class="prin">
         <article class="rv"><span class="k">공개</span><h4>실 한 가닥까지</h4><p>법적 표시 의무는 원단 혼용률까지입니다. 저희는 실, 끈, 라벨, 가공제, 포장까지 적습니다.</p></article>
-        <article class="rv"><span class="k">배제</span><h4>확인 못 하면 쓰지 않기</h4><p>성분을 확인할 수 없는 가공제와 향료, 석유 유래 섬유는 넣지 않습니다.</p></article>
+        <article class="rv"><span class="k">배제</span><h4>확인 못 하면 쓰지 않기</h4><p>성분을 확인할 수 없는 가공제와 향료는 넣지 않습니다. 플라스틱은 뺄 수 있는 데까지 빼고, 아직 못 뺀 것은 이유와 함께 적습니다.</p></article>
         <article class="rv"><span class="k">안내</span><h4>쓰는 법과 버리는 법</h4><p>빨래, 건조, 수명이 다한 뒤까지 카드로 함께 보냅니다.</p></article>
       </div>
     </div>
@@ -635,7 +636,7 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
               <div class="beat" data-b="1"><span class="st-num">2~4<small>℃</small></span><p class="st-line">고환은 체온보다 이만큼 낮아야 합니다. 그런데 몸에 붙는 속옷은 그 거리를 없앱니다.</p><span class="st-src">헐렁한 사각 착용 남성의 정자 농도가 25% 높았다는 관찰 연구(Mínguez-Alarcón 외, 2018). 다만 2026년 종합 검토는 속옷을 바꾸는 것이 임신 결과를 개선한다는 근거는 아직 없다고 봅니다(Zleczewski 외)</span></div>
               <div class="beat" data-b="2"><span class="st-num">14<small>/16</small></span><p class="st-line">남성 대부분은 몸에 붙는 드로즈를 입습니다. 몸에 붙이려면 스판 같은 플라스틱 섬유가 꼭 필요합니다.</p><span class="st-src">언플라스틱 설문 2026.10 · 남성 응답자</span></div>
               <div class="beat" data-b="3"><span class="st-num">2024</span><p class="st-line">사람의 고환에서 미세플라스틱이 나왔습니다. 무슨 영향인지는 아직 모릅니다.</p><span class="st-src">검출까지만 확인 · Hu 외, Toxicological Sciences, 2024</span></div>
-              <div class="beat" data-b="4"><span class="st-num">1<small>줄</small></span><p class="st-line">속옷 라벨에 적어야 하는 건 원단 혼용률 한 줄뿐. 허리밴드, 실, 가공제는 아무도 적지 않습니다.</p><span class="st-src">가정용품 품질표시 기준</span></div>
+              <div class="beat" data-b="4"><span class="st-num">1<small>줄</small></span><p class="st-line">속옷 라벨은 보통 혼용률 한 줄. 허리밴드, 실, 가공제까지 적는 곳은 드뭅니다.</p><span class="st-src">시중 제품 상세 페이지 조사 · 2026.10</span></div>
             </div>
           </div>
           <div class="st-a">
@@ -665,9 +666,9 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
     </div>
     <div class="wrap">
       <div class="block why-block">
-        <div class="subhead rv"><span class="sub-label">3-2 · 왜 다른 속옷 라벨에는 한 줄만 적혀 있을까</span><h3>숨긴 게 아니라,<br>적지 않아도 되기 때문입니다.</h3></div>
+        <div class="subhead rv"><span class="sub-label">3-2 · 왜 다른 속옷 라벨에는 한 줄만 적혀 있을까</span><h3>숨겼다기보다,<br>적는 관행이 없기 때문입니다.</h3></div>
         <div class="why3">
-          <article class="rv"><span class="n">01</span><h4>법이 거기까지만 요구합니다</h4><p>섬유 제품 표시 기준은 원단 혼용률, 세탁 방법, 제조자 정도입니다. 봉제실, 허리밴드, 라벨, 가공제는 적지 않아도 됩니다.</p></article>
+          <article class="rv"><span class="n">01</span><h4>제품마다 적는 범위가 다릅니다</h4><p>보통 혼용률, 세탁 방법, 제조자 정도를 적습니다. 허리밴드를 혼용률에 넣는 곳도, 빼고 '면 100%'라고 쓰는 곳도 있습니다. 봉제실과 가공제까지 적는 곳은 드뭅니다.</p></article>
           <article class="rv"><span class="n">02</span><h4>만드는 쪽도 다 모를 때가 많습니다</h4><p>실과 밴드는 봉제 공장이 갖고 있는 것을 쓰는 경우가 많아, 브랜드가 부품 소재를 하나하나 확인하지 않기도 합니다.</p></article>
           <article class="rv"><span class="n">03</span><h4>적으면 보이는 것이 있습니다</h4><p>'면 100%' 옆에 '봉제실 폴리에스터 · 허리 폴리우레탄'을 함께 적으면, 같은 속옷도 다르게 읽힙니다.</p></article>
         </div>
@@ -724,7 +725,7 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
             <div class="card"><div class="top"><span class="m">2026.11</span><span class="chip">지금</span></div><h4>첫 샘플</h4><p>면사만으로 박은 솔기가 버티는지 봅니다.</p>
               <ul><li>업체 견적 · 패턴</li><li>원단 첫 세탁 수축률 측정</li><li>면사 통솔 봉제 테스트</li></ul></div></li>
           <li><span class="node" aria-hidden="true"></span>
-            <div class="card"><div class="top"><span class="m">2026.11~12</span><span class="chip">다음</span></div><h4>착용 테스트</h4><p>다섯 사람이 일주일씩 입어 봅니다.</p>
+            <div class="card"><div class="top"><span class="m">2026.11~12</span><span class="chip">다음</span></div><h4>착용 테스트</h4><p>다섯 사람이 출근하는 날을 포함해 사흘씩 입어 봅니다.</p>
               <ul><li>바지 안에서의 핏</li><li>세탁 뒤 크기 변화</li><li>끈 허리의 불편함</li></ul></div></li>
           <li><span class="node" aria-hidden="true"></span>
             <div class="card"><div class="top"><span class="m">이후</span><span class="chip">예정</span></div><h4>창립 멤버 모집</h4><p>대기 신청한 분들께 가장 먼저 알립니다.</p>
@@ -739,14 +740,17 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
   <section class="chapter band" id="together">
     <div class="wrap">
       <div class="head rv"><span class="ch-label"><span class="no">04</span>함께하기</span><h2>읽는 건 무료,<br>바꾸는 건 함께.</h2>
-        <p class="lede">리포트는 누구나 받아 볼 수 있습니다. 시즌마다 물건을 함께 바꾸고 다음 물건을 정하는 사람은 창립 멤버가 됩니다.</p></div>
+        <p class="lede">리포트는 누구나 받아 볼 수 있습니다. 직접 고르기 어렵다면 확인을 마친 물건을 묶은 키트로, 시즌마다 함께 바꾸고 다음 물건을 정하고 싶다면 창립 멤버로.</p></div>
       <div class="tiers">
         <div class="tier rv"><span class="sub-label">구독</span><div class="price">무료</div>
-          <ul><li>격주 리포트 하우투 언플라스틱</li><li>한 회에 물건 하나, 근거 강도 표시</li><li>캠페인 참여 소식</li></ul>
+          <ul><li>격주 영상 팟캐스트 · 리포트 하우투 언플라스틱</li><li>한 회에 물건 하나, 근거 강도 표시</li><li>캠페인 참여 소식</li></ul>
           <p class="note">언제든 그만 받을 수 있습니다.</p></div>
         <div class="tier main rv"><span class="sub-label" style="color:var(--stamp)">창립 멤버 · 모집 준비 중</span><div class="price">시즌 박스 <small>연 2회</small></div>
           <ul><li>시즌마다 바꿀 물건 하나 (시즌 1은 Trunk 01 두 장)</li><li>성분 카드와 사용 가이드</li><li>다음 물건을 정하는 투표권</li><li>만드는 과정의 개발 일지</li></ul>
           <p class="note">가격과 결제 방식은 대기 신청자 의견을 듣고 정합니다.</p></div>
+        <div class="tier rv"><span class="sub-label">Kit 01 · 준비 중</span><div class="price">스타트 키트</div>
+          <ul><li>대나무 치실 · 대나무 칫솔 · 수세미 · 소창 행주</li><li>품목별 성분 카드, 못 뺀 것까지</li><li>만든 곳과 확인한 범위 공개</li><li>EP.03~06에서 하나씩 소개</li></ul>
+          <p class="note">매일 쓰는 넷, 오늘부터 하나씩. 가격은 대기 신청자 의견을 듣고 정합니다.</p></div>
       </div>
     </div>
   </section>
@@ -754,8 +758,8 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
   <section class="chapter" id="report">
     <div class="wrap">
       <div class="rep-head">
-        <div class="head rv"><span class="ch-label">하우투 언플라스틱 · 무료 격주 리포트</span><h2>한 회에<br>물건 하나.</h2></div>
-        <p class="lede rv">무엇이 문제인지, 근거가 얼마나 강한지(강·중·약), 무엇으로 바꾸면 되는지. 제품을 사지 않아도 읽을 수 있습니다.</p>
+        <div class="head rv"><span class="ch-label">하우투 언플라스틱 · 무료 격주 영상 팟캐스트 · 리포트</span><h2>한 회에<br>물건 하나.</h2></div>
+        <p class="lede rv">무엇이 문제인지, 근거가 얼마나 강한지(강·중·약), 무엇으로 바꾸면 되는지. 30분 영상 팟캐스트로 이야기하고, 같은 내용을 리포트로 정리해 보내 드립니다. 제품을 사지 않아도 볼 수 있습니다.</p>
       </div>
       <div class="rep-grid">
         <a class="feat rv" href="#join">
@@ -764,8 +768,8 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
         </a>
         <ol class="rep-list">
           <li class="rv"><div class="th"><img src="img/concept-woven-flat.jpg" alt="면 트렁크" loading="lazy"></div><div><span class="ep">EP.02 · 속옷 · 11월</span><h4>당신의 팬티 성분은 무엇인가요?</h4><p>라벨 한 줄로는 알 수 없는 것들.</p></div></li>
-          <li class="rv"><div class="th slot">[사진:<br>수세미]</div><div><span class="ep">EP.03 · 수세미 · 12월</span><h4>수세미는 어디로 닳아 없어질까요?</h4><p>초록 수세미의 소재와 설거지물의 행방.</p></div></li>
-          <li class="rv"><div class="th slot">[사진:<br>세제]</div><div><span class="ep">EP.04 · 세제 · 12월</span><h4>세제의 향은 무엇으로 만들까요?</h4><p>'향료' 두 글자 뒤에 숨은 성분.</p></div></li>
+          <li class="rv"><div class="th slot">[사진:<br>치실]</div><div><span class="ep">EP.03 · 치실 · 12월</span><h4>'대나무 치실'의 대나무는 어디에 있을까요?</h4><p>실, 코팅, 용기를 하나씩 열어 봅니다.</p></div></li>
+          <li class="rv"><div class="th slot">[사진:<br>칫솔]</div><div><span class="ep">EP.04 · 칫솔 · 12월</span><h4>칫솔모는 왜 아직 못 뺐을까요?</h4><p>대나무 손잡이에 나일론 모, 돼지털을 고르지 않은 이유. EP.05 수세미 · EP.06 행주로 이어집니다.</p></div></li>
           <li class="rv"><div class="th slot">교집합</div><div><span class="ep">매달 한 번 · 전문가 대담</span><h4>두 전문가의 교집합에서 물건 하나</h4><p>난임 전문의 × 섬유 시험 전문가처럼, 분야가 다른 두 사람이 함께 찾는 다음 물건.</p></div></li>
         </ol>
       </div>
@@ -775,7 +779,7 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
   <section class="campaign-band" id="campaign">
     <div class="wrap cb">
       <div class="rv"><span class="sub-label">캠페인 · 블랙프라이데이 11.27</span><h2>면 100%라고<br>적혀 있나요?<br><span>허리를 보세요.</span></h2></div>
-      <div class="cb-r rv"><p>법이 적으라고 하는 건 원단뿐입니다. 허리밴드, 실, 라벨은 아무도 적지 않습니다. 지금 입은 속옷의 라벨을 찍어 보내 주세요. 적히지 않은 부분을 함께 찾아 드립니다.</p>
+      <div class="cb-r rv"><p>같은 '면 100%'라도 고무줄이 원단 안에 숨어 있거나, 허리밴드만 따로 5%로 적혀 있기도 합니다. 실과 라벨까지 적는 곳은 드뭅니다. 지금 입은 속옷의 라벨을 찍어 보내 주세요. 적히지 않은 부분을 함께 찾아 드립니다.</p>
         <div class="cb-more"><span>상시 · 영수증 안 받기</span><span>멤버와 함께 · 기업에 묻기</span><span>도구 · 성분표 읽는 법</span></div>
         <a class="btn" href="#join">소식 받고 참여하기</a></div>
     </div>
@@ -798,6 +802,13 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
             <label><input type="radio" name="price" id="p2" value="시즌마다 5만원대"> 시즌마다 5만원대</label>
             <label><input type="radio" name="price" id="p3" value="박스 보고 결정"> 박스를 보고 정할게요</label>
           </div></fieldset>
+        <fieldset><legend>스타트 키트(치실 · 칫솔 · 수세미 · 행주), 얼마면 사시겠어요</legend>
+          <div class="opts">
+            <label><input type="radio" name="kit" id="k1" value="2만원대"> 2만원대</label>
+            <label><input type="radio" name="kit" id="k2" value="3만원대"> 3만원대</label>
+            <label><input type="radio" name="kit" id="k3" value="4만원대"> 4만원대</label>
+            <label><input type="radio" name="kit" id="k4" value="아직 모름"> 아직 모르겠어요</label>
+          </div></fieldset>
         <fieldset><legend>다음에 바꾸고 싶은 물건 (여러 개)</legend>
           <div class="opts">
             <label><input type="checkbox" name="next" id="n1" value="수세미"> 수세미</label>
@@ -805,6 +816,8 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
             <label><input type="checkbox" name="next" id="n3" value="식품 용기"> 식품 용기</label>
             <label><input type="checkbox" name="next" id="n4" value="베개·침구"> 베개·침구</label>
             <label><input type="checkbox" name="next" id="n5" value="치실"> 치실</label>
+            <label><input type="checkbox" name="next" id="n6" value="칫솔"> 칫솔</label>
+            <label><input type="checkbox" name="next" id="n7" value="행주"> 행주</label>
           </div></fieldset>
         <label class="consent" for="agree"><input type="checkbox" id="agree" name="agree" required><span>이메일 주소를 소식 발송 목적으로 수집하는 데 동의합니다. 구독을 해지하면 바로 지웁니다.</span></label>
         <div><button class="btn" type="submit">대기 신청하기</button></div>
@@ -917,7 +930,7 @@ footer ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:2px;
     e.preventDefault();const f=e.target,msg=$("#msg");const email=f.email.value.trim();
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent="이메일 주소를 확인해 주세요.";f.email.focus();return}
     if(!f.agree.checked){msg.textContent="수집 동의에 체크해 주세요.";return}
-    const data={email,want:f.want.value,price:(f.querySelector("input[name=price]:checked")||{}).value||"",next:$$("input[name=next]:checked").map(x=>x.value).join(", ")};
+    const data={email,want:f.want.value,price:(f.querySelector("input[name=price]:checked")||{}).value||"",kit:(f.querySelector("input[name=kit]:checked")||{}).value||"",next:$$("input[name=next]:checked").map(x=>x.value).join(", ")};
     if(!FORM_ENDPOINT){msg.innerHTML='<span class="done">미리보기 화면이라 신청이 저장되지 않았어요. 오픈 버전에서는 이 자리에 확인 메시지가 나옵니다.</span>';return}
     try{const r=await fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(data)});if(!r.ok)throw 0;
       f.reset();msg.innerHTML='<span class="done">신청됐어요. 첫 리포트를 보낼 때 이 주소로 연락드릴게요.</span>'}
